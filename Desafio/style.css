@@ -1,0 +1,230 @@
+
+
+body{
+    background-color: #293339;
+}
+
+.container{
+    display: flex;
+    height: 100vh;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Times New Roman', Times, serif;
+    
+    
+    .element-conection{
+        content: "";
+        display: flex;
+        background-color: rgba(255, 255, 255, 0.062);
+        width: 4rem;
+        height: 3px;
+    }
+    /* ============================================ */
+                  /*Deploy Square Config*/
+    .element-deploy{
+        position: relative;
+        display: flex;
+        color: rgba(255, 255, 255, 0.767);
+        
+        background-color: #343945;
+        height: 40px;
+        width: 17rem;
+        justify-content: center;
+        align-items: center;
+        border: rgba(255, 255, 255, 0.062);
+        border-width: 1px;
+        border-style: solid;
+        border-radius: 10px;
+        
+        .contador{
+            color: rgba(255, 255, 255, 0.219);
+            padding-left: 7px;
+        }
+
+        .aside-element-deploy{
+            position: absolute;
+            right: -9px;
+            width: 1rem;
+            height: 17px;
+        
+            background-color: #343945;
+            
+            border: #343945;
+            border-right: 1px solid rgba(255, 255, 255, 0.062);
+            border-radius: 50%;
+        }
+    
+
+    }
+
+    /* ============================================ */
+                  /*Job square Config */
+    .element-job-list{
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background-color: #343945;
+        border: rgba(255, 255, 255, 0.062);
+        height: 100px;
+        width: 10rem;
+        padding-right: 70px;
+        border-width: 1px;
+        border-style: solid;
+        border-radius: 10px;
+        border-top-left-radius: 0%;
+        gap: 20px;
+
+        .spam-list{
+            font-size: ;
+            color: rgba(255, 255, 255, 0.767);
+        }
+
+        .hidden-content{
+            font-size: 1rem;
+            padding-right: 50px;
+            color: rgba(255, 255, 255, 0.219);
+        }
+
+        .aside-element-job{
+            position: absolute;
+            left: -9px;
+            width: 1rem;
+            height: 17px;
+        
+            background-color: #343945;
+            
+            border: #343945;
+            border-left: 1px solid rgba(255, 255, 255, 0.062);
+            border-radius: 50%;
+        
+        }
+
+    }
+}
+
+    /* ============================================ */
+                    /*Deploy Elements*/
+
+    .element-deploy::before{
+        content:'\f058';
+        font-family: FontAwesome;;
+        font-size: 1rem;
+        padding-right: 15px;
+        color: rgb(114, 169, 102);
+      }
+
+    .element-deploy::after{
+        content: "";
+        position: absolute;
+        right: -5px;
+        background-color: rgb(87, 92, 102);
+        width: 0.6rem;
+        height: 10px;
+        border-radius: 100%;
+        z-index: 1;
+    }
+
+    
+    /* ============================================ */
+                    /*Job List Elements*/
+                    
+    .element-job-list::before{
+        content: "";
+        position: absolute;
+        left: -5px;
+        background-color: rgb(87, 92, 102);
+        width: 0.6rem;
+        height: 10px;
+        border-radius: 100%;
+        z-index: 1;
+    }
+    
+    .element-job-list::after{
+        content: "Matrix: prepare-release-on-se...";
+        position: absolute;
+        top: -1.80rem;
+        left: -1px;
+
+        color: rgba(255, 255, 255, 0.767);
+        font-size: 0.8rem;
+        font-family: 'Times New Roman', Times, serif;
+
+        background-color: #343945;
+        width: 12rem;
+        height: 22px;
+        
+
+        padding-left: 8px;
+        padding-top: 6px;
+        
+
+        border:1px solid rgba(255, 255, 255, 0.062);
+        border-bottom: none;
+        border-radius: 10px;
+        border-bottom-left-radius: 0px;
+        border-bottom-right-radius: 0px;
+        z-index: 1;
+
+    }
+
+    .spam-list::before{
+        content:'\f058';
+        font-family: FontAwesome;;
+        font-size: 1rem;
+        padding-right: 15px;
+        color: rgb(114, 169, 102);
+    }
+
+
+        /* ============================================ */
+                        /*Media Query*/
+
+    @media (max-width: 1024px){
+        .container{
+            flex-direction: column;
+
+
+            .element-conection{
+                height: 200px;
+                width: 0.3rem;
+            }
+
+            .element-deploy, .element-job-list{
+                position: relative;
+            }
+
+            /*Square deploy elements*/
+
+            .element-deploy::after{
+                top: 35px;
+                right: 131px;
+            }
+
+            .aside-element-deploy{
+                top: 32px;
+                left: 128px;
+                border-bottom: 1px solid rgba(255, 255, 255, 0.062);
+
+            }
+
+
+            /*Square job-list Elements*/
+
+            .aside-element-job{
+                
+                left: 10px;
+                right: -10px;
+                z-index: 2;
+            }
+
+            .element-job-list::before{
+                top: -33px;
+                left: 110px;
+                z-index: 3;
+            }
+
+    }
+}
