@@ -214,9 +214,9 @@ body{
             /*Square job-list Elements*/
 
             .aside-element-job{
-                
-                left: 10px;
-                right: -10px;
+                left: 107px!important;
+                border: none;
+                top: -36px;
                 z-index: 2;
             }
 
